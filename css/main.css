@@ -8,8 +8,17 @@ body {
   background-color: #10005b;
 }
 
+h1 {
+  padding-bottom: 15px;
+  margin: 0;
+}
+
 p {
   font-size: 20px;
+}
+
+.main__logo {
+  margin: 30px 0;
 }
 
 .main__video {
@@ -151,3 +160,42 @@ p {
 
 
 /* slider */
+
+.slider {
+    background: linear-gradient(#fff 50%, #150366 50%);
+    min-height: 150px;
+}
+
+.slider__text_black {
+  color: #000;
+  font-size: 17px;
+}
+
+.owl-nav {
+  display: none;
+}
+
+/* carusel item */
+.item {
+  justify-content: center;
+  padding: 15px 15px 0 15px;
+  background: #fff;
+  box-shadow: 0 0 6px 3px rgba(25, 27, 28, 0.2);
+  border-radius: 7px;
+}
+
+.carousel__item_pink {
+  color: #d13e72;
+}
+
+.item h4 {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+.item p {
+  margin: 0;
+  color: #353535;
+}
