@@ -412,6 +412,9 @@ p {
   .form__button {
     font-size: 14px;
   }
+  .advertising__text_position {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
