@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 //  random function
 function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return (Math.random() * (max - min + 1) + min).toFixed(2);
 }
 
 
@@ -85,6 +85,6 @@ window.onload = function() {
     let newBid = getRandomInRange(1200, 4599);
     let newAsk = getRandomInRange(1200, 4599);
 
-    bidContainer.innerText = newBid;
-    askContainer.innerText = newAsk;
+    bidContainer.innerHTML = '&#8364;' + newBid;
+    askContainer.innerHTML = '&#8364;' + newAsk;
 };
