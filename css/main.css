@@ -374,6 +374,11 @@ p {
     padding-bottom: 15px;
   }
 
+  .main__logo__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .video__wrapper p {
     white-space: normal;
   }
