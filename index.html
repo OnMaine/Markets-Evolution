@@ -37,7 +37,7 @@
         </div>
         <div class="col-4 d-flex flex-column justify-content-end">
           <div class="form">
-            <form id="form" action="#" method="post">
+            <form id="form">
               <div class="form__text d-flex flex-column justify-content-center">
                 <div class="form__logo d-flex justify-content-center">
                   <p>
@@ -52,16 +52,16 @@
               </div>
               <div class="form__imputs d-flex flex-column align-items-center w-100">
                 <div class="form__imput">
-                  <input type="text" name="name" id="name" placeholder="First name" required>
+                  <input type="text" name="name" id="name" placeholder="First name">
                 </div>
                 <div class="form__imput">
-                  <input type="text" name="name" id="name" placeholder="Last name" required>
+                  <input type="text" name="name" id="sureName" placeholder="Last name">
                 </div>
                 <div class="form__imput">
-                  <input type="email" name="email" id="email" placeholder="Email address" required>
+                  <input type="email" name="email" id="email" placeholder="Email address">
                 </div>
                 <div class="form__imput">
-                  <button form="form" type="submit" class="form__button">Join now and Start winning</button>
+                  <button id="form__btn" form="form" type="submit" class="form__button">Join now and Start winning</button>
                 </div>
               </div>
             </form>
@@ -100,7 +100,7 @@
     </div>
   </section>
   <section class="slider">
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="owl-carousel owl-theme p-4">
+      <div class="owl-carousel owl-theme">
           <div class="item">
             <div class="text-dark">
               <div>
@@ -209,11 +209,31 @@
     </div>
   </section>
 
+  <section class="popUp">
+    <div class="container">
+      <div class="popUp__body">
+        <div class="popUp__main">
+            <a href="#" class="close" title="Close"></a>
+            <div class="popUp__heading">Your data:</div>
+              <div class="popUp__data">
+                <div>
+                  <p>First name: <span class="dataBox" id="name"></span> </p>
+                </div>
+                <div>
+                  <p>Last name: <span class="dataBox" id="sureName"></span></p>
+                </div>
+                <div>
+                  <p>Email: <span class="dataBox" id="email"></span></p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="js/owl.carousel.min.js"></script>
-
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
