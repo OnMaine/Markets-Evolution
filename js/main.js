@@ -34,68 +34,39 @@ let data = {
   email: ""
 };
 
-// // popUp
-// $(document).ready(function() {
-//     // Open Popup Js
-//     $("#form").on('submit',function(){
-//       // update data in obj
-//       function updateData(data) {
-//         data.name = $("#name").val();
-//         data.sureName = $("#sureName").val();
-//         data.email = $("#email").val();
-//       };
-//       updateData(data);
-//
-//       let dataBoxes = $('.dataBox');
-//       // update text in popUp
-//       dataBoxes.each(function (index, value) {
-//         let id = $(this).attr('id');
-//         for (key in data) {
-//           if (id === key) {
-//             let newBoxData = data[key];
-//             value.append(newBoxData);
-//           }
-//         }
-//       });
-//     // open popUp
-//       $(".popUp__body").fadeIn("200");
-//     });
-//
-//     // Close Popup Js
-//     $(".close").on('click',function(){
-//       $(".popUp__body").fadeOut("200");
-//     });
-//
-// });
-
+// popUp
 $(document).ready(function() {
-  $("#form__btn").on('click', function() {
-    // update data in obj
-    function updateData(data) {
-      data.name = $("#name").val();
-      data.sureName = $("#sureName").val();
-      data.email = $("#email").val();
-    };
-    updateData(data);
+    // Open Popup Js
+    $("#form").on('submit',function(){
+       event.preventDefault();
+      // update data in obj
+      function updateData(data) {
+        data.name = $("#name").val();
+        data.sureName = $("#sureName").val();
+        data.email = $("#email").val();
+      };
+      updateData(data);
 
-    let dataBoxes = $('.dataBox');
-    // update text in popUp
-    dataBoxes.each(function(index, value) {
-      let id = $(this).attr('id');
-      for (key in data) {
-        if (id === key) {
-          let newBoxData = data[key];
-          value.append(newBoxData);
+      let dataBoxes = $('.dataBox');
+      // refresh boxes
+      dataBoxes.empty();
+      // update text in popUp
+      dataBoxes.each(function (index, value) {
+        let id = $(this).attr('id');
+        for (key in data) {
+          if (id === key) {
+            let newBoxData = data[key];
+            value.append(newBoxData);
+          }
         }
-      }
-    });
+      });
     // open popUp
-    $(".popUp__body").fadeIn("200");
-  })
+      $(".popUp__body, .overlay").fadeIn("200");
+    });
 
-  // Close Popup Js
-  $(".close").on('click', function() {
-    $(".popUp__body").fadeOut("200");
-  })
+    // Close Popup Js
+    $(".close").on('click',function(){
+      $(".popUp__body, .overlay").fadeOut("200");
+    });
 
 });
