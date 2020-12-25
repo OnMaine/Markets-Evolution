@@ -406,8 +406,9 @@ p {
   .popUp__body {
     width: 300px;
     margin:auto;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
+    top: 30%;
   }
   .form__button {
     font-size: 14px;
