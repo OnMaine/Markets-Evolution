@@ -70,3 +70,21 @@ $(document).ready(function() {
     });
 
 });
+
+//  random function
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+//  change text at Ask & Bid  with a pure JS (according to the requirements of the assignment)
+window.onload = function() {
+    bidContainer = document.getElementById("bid");
+    askContainer = document.getElementById("ask");
+
+    let newBid = getRandomInRange(1200, 4599);
+    let newAsk = getRandomInRange(1200, 4599);
+
+    bidContainer.innerText = newBid;
+    askContainer.innerText = newAsk;
+};
